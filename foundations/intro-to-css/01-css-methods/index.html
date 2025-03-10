@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> <!-- For external CSS, a separate ".css" file must be made and linked inside of an HTML's opening/closing <head> tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Methods for Adding CSS</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link index.html to style.css using a void link element (<link>)-->
+    <style>
+      p {
+        color: white;
+        background-color: green;
+        font-size: 18px;
+      }
+    </style> <!-- Internal CSS (Embedded CSS) is done by placing the CSS within an HTML file using the <style> tags inside of the <head> tags. -->
   </head>
   <body>
     <div>Style me via the external method!</div>
     <p>I would like to be styled with the internal method, please.</p>
-    <button>Inline Method</button>
-  </body>
+    <button style="background-color: orange; font-size: 18px;">Inline Method</button> <!-- Inline CSS uses the "style" attribute to add styles directly to HTML elements.-->
+  </body>                                                                               <!-- This method will override the other two methods. Use sparingly. -->
 </html>
